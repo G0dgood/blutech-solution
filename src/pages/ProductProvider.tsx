@@ -11,8 +11,7 @@ export const ProductProvider = ({ children }: any) => {
 		const fetchProducts = async () => {
 			try {
 				// Replace 'supplier_name' with one of the actual supplier names: FragranceX, FragranceNet, Morris Costumes
-				const supplierName = 'FragranceX'; // Replace with the supplier you want to fetch data from
-				const response = await fetch(`http://3.88.1.181:8000/products/public/catalog?supplier=${supplierName}`);
+				const response = await fetch(`http://3.88.1.181:8000/products/public/catalog?supplier=FragranceX`);
 				const data = await response.json();
 				setProducts(data);
 			} catch (error: any) {
